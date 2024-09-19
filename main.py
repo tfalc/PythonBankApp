@@ -1,6 +1,6 @@
 menu = """
 
- #### Banco do Falcão ####
+ __-| Banco do Falcão |-__
  
 Selecione a opção abaixo:
 [D] Depositar
@@ -8,8 +8,8 @@ Selecione a opção abaixo:
 [E] Extrato
 [X] Sair
 
- #########################
-"""
+#########################
+::>_"""
 
 saldo = 0
 limite = 3000
@@ -66,10 +66,11 @@ while True:
 
         # Texto final com a formatação
         print(f"""
-        #### Extrato ####
+        #################### Extrato ################
         {texto_saldo_atual}{recuo}R${saldo:.2f}
         {texto_limite_saque}{recuo_limite}R${limite:.2f}
         {texto_saque_restante}{recuo_saque_restante}{limite_saques}
+        #############################################
         """)
 
     elif opcao == "X":
