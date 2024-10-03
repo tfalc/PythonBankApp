@@ -118,7 +118,7 @@ def menu_principal(opcao, saldo, limite, limite_saques):
     switch = {
         'D': lambda: depositar(saldo),
         'S': lambda: sacar(saldo, limite, limite_saques),
-        'E': lambda: extrato(saldo, limite, limite_saques),
+        'E': lambda: exibir_extrato(saldo, limite, limite_saques),
         'Q': lambda: False
     }
 
@@ -127,14 +127,7 @@ def menu_principal(opcao, saldo, limite, limite_saques):
 
 
 def main():
-    LIMITE_SAQUES = 5
-    AGENCIA = "0001"
-
-    saldo = 0
-    limite = 8000
-    extrato = ""
-    numero_saques = 0
-    usuarios = []
+    clientes = []
     contas = []
 
     while True:
